@@ -1,33 +1,64 @@
 // getGreeting should return a string containing
 // 'Hello ' and the contents of `name`
-export function getGreeting(name: string): void {}
+export function getGreeting(name: string) {
+  return `Hello ${name}`
+}
+getGreeting('human')
 
 // getFullName should return a string containing the contents
 // of `firstName` and the contents of `lastName`
-export function getFullName(firstName: string, lastName: string): void {}
+export function getFullName(firstName: string, lastName: string) {
+  return `${firstName} ${lastName}`
+}
 
 // addNumbers should return the sum of the two parameters
-export function addNumbers(): void {}
+export function addNumbers(a: number, b: number) {
+  return a + b
+}
 
 // bottlesOfBeerOnTheWall should return a string containing
 // the number of bottles of beer on the wall, but!
 // if the number of bottles is 0, it should return 'No more bottles of beer on the wall'
-export function bottlesOfBeerOnTheWall(): void {}
+export function bottlesOfBeerOnTheWall(a: number) {
+  if (a === 0) {
+    return 'No more bottles of beer on the wall'
+  } else {
+    return `${a} bottles of beer on the wall`
+  }
+}
 
 // printGreeting should not return a value,
 // instead it should console.log a string containing
 // 'Hello name'
-export function printGreeting(): void {}
+export function printGreeting(name: string) {
+  console.log(`Hello ${name}`)
+}
 
 // ----------- OPTIONAL PARAMS -----------
 
 // sumFrame accepts two balls and returns the sum of the two numbers
 // sometimes there may be a third ball, if there is, add it to the sum
-export function sumFrame(): void {}
+export function sumFrame(a: number, b: number, c?: number) {
+  if (c) {
+    return a + b + c
+  } else {
+    return a + b
+  }
+}
 
 // greetFullName should return a string containing the full name
 // including middle name if it exists
-export function greetFullName(): void {}
+export function greetFullName(
+  firstName: string,
+  lastName: string,
+  middleName?: string
+) {
+  if (middleName) {
+    return `Hello ${firstName} ${middleName} ${lastName}`
+  } else {
+    return `Hello ${firstName} ${lastName}`
+  }
+}
 
 // ----------- UNIONS -----------
 
